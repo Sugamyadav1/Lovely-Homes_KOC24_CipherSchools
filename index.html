@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="navbar/only_logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700,800" rel="stylesheet"
+        type="text/css">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css_files/homepage.css">
+    <script src="js_files/homepage.js"></script>
+    <!-- for navbar -->
+    <link rel="stylesheet" href="css_files/navigation.css">
+    <link rel="stylesheet" href="navbar/login.css">
+    <script src="navbar/login.js"></script>
+    <!-- for homepage cards -->
+    <!-- <link rel="stylesheet" href="block.css"> -->
+    <!-- about us -->
+    <link rel="stylesheet" href="css_files/about_us.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="navbar/logo.png" alt="" srcset=""></a>
+        <div id="navbar_cont1" class="navbar_content" style="margin-left: 25%;"
+            onclick="window.location.href = 'buy_page.html';">Buy</div>
+        <div id="navbar_cont2" class="navbar_content" onclick="window.location.href = 'rent_page.html';">Rent</div>
+        <div id="navbar_cont3" class="navbar_content" onclick="window.location.href = 'sell_page.html';">Sell</div>
+        <div id="navbar_cont4" class="navbar_content" onclick="window.location.href='contact_us.html'">Contact Us</div>
+        <div id="navbar_cont5" class="navbar_content" onclick="login_page_opener()">Sign in</div>
+        <div class="navbar_post_property" onclick="window.location.href = 'sell_page.html';">
+            POST PROPERTY <br>FOR FREE
+        </div>
+        <!-- for opening signin popup -->
+        <div id="login_popup">
+            <div class="login_box">
+                <img class="close_icon" onclick="closefn()" src="navbar/login_popup_image/Close-icon.png"
+                    alt="close icon"
+                    style="float: right;width: 25px;height: 25px;margin-top: -11px;margin-right: -12px;">
+                <div class="login_left">
+                    <img src="navbar/login_popup_image/building.webp" alt="" srcset="">
+                </div>
+                <div class="login_right">
+                    <div class="login_top">
+                        <div id="login_head" class="btn2" onclick="func1()">Login</div>
+                        <div id="signup_head" class="btn2" onclick="func2()" style="color: black;border-color: black;">
+                            Sign Up</div>
+                    </div>
+                    <div class="login_bottom">
+                        <form id="login_content">
+                            <!-- <div class="login_dialog">Username</div> -->
+                            <label class="login_dialog" for="username">Username</label>
+                            <input type="text" name="username" id="username" placeholder="Username">
+                            <!-- <div class="login_dialog">Password</div> -->
+                            <label class="login_dialog" for="passid">Password</label>
+                            <input type="text" name="password" id="passid" placeholder="Password">
+                            <!-- <button class="btn3" onclick="closefn()">Login</button> -->
+                            <input class="btn3" onclick="closefn()" type="submit" value="Login">
+                        </form>
+                        <form id="signup_content">
+                            <!-- <div class="login_dialog">Name</div> -->
+                            <label class="login_dialog" for="nameid">Name</label>
+                            <input type="text" name="myname" id="nameid" placeholder="Name">
+                            <!-- <div class="login_dialog">Email</div> -->
+                            <label class="login_dialog" for="emailid">Email</label>
+                            <input type="text" name="email_id" id="emailid" placeholder="Email">
+                            <!-- <div class="login_dialog">Password</div> -->
+                            <label class="login_dialog" for="pass">Password</label>
+                            <input type="text" name="pass" id="pass" placeholder="Password">
+                            <!-- <button class="btn3" onclick="closefn()">Signup</button> -->
+                            <input class="btn3" onclick="closefn()" type="submit" value="Signup">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content_main">
+        <!-- <img src="/homepage/homepage_image/los-angeles-traffic-city-night-wallpaper.jpg" alt="" srcset=""> -->
+        <!-- <img src="/homepage/homepage_image/building3.jpg" alt="" srcset=""> -->
+        <div class="content_main_image"></div>
+        <div class="content_search_box">
+            <div class="search_up">
+                <div id="search_id1" class="search_categories" onclick="func17()" style="margin-left: 40px;">Buy </div>
+                <div id="search_id2" class="search_categories" onclick="func18()">Rent</div>
+                <div id="search_id3" class="search_categories" onclick="func19()">PG/Co-living</div>
+                <div id="search_id4" class="search_categories" onclick="func20()">Apartment</div>
+                <div id="search_id5" class="search_categories" onclick="func21()">Commercial</div>
+                <div id="search_id6" class="search_categories" onclick="func22()">Plot/Land</div>
+                <div id="search_id7" class="search_categories" onclick="func23()">Post property</div>
+            </div>
+            <form class="search_down">
+                <div class="location">
+                    <img src="homepage_image/location.png" alt="" srcset="">
+                    <input id="id12" type="text" name="location"  placeholder="Location" required>
+                </div>
+                <div class="flat_type">
+                    <img src="homepage_image/home.png" alt="" srcset="">
+                    <input id="id13" type="text" name="flat" placeholder="Flat" required>
+                </div>
+                <div class="budget">
+                    <img src="homepage_image/rupee.png" alt="" srcset="">
+                    <input id="id13" type="text" name="budget" placeholder="Budget" required>
+                </div>
+                <div class="search">
+                    <div class="search_box" onclick="javascript:document.forms[2].submit()">
+                        <img src="homepage_image/search.png" alt="" srcset="">
+                        Search
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="main_properties">
+        <section>
+            <div class="firstline" style="margin-left: 1%;">Lets find your dream home</div>
+            <div class="selected_card">
+                <div class="selected_flat">
+                    <div class="selected_flat_up">
+                        <img src="product_image/building1.jpg" alt="" srcset="">
+                    </div>
+                    <div class="selected_flat_down">
+                        <p class="selected_price">50 Lac/-</p>
+                        <p class="selected_house">Affinity International</p>
+                        <p class="selected_location">in pune,Maharasatra <br>3BHK </p>
+                    </div>
+                </div>
+                <div class="selected_flat">
+                    <div class="selected_flat_up">
+                        <img src="product_image/building2jpg" alt="" srcset="">
+                    </div>
+                    <div class="selected_flat_down">
+                        <p class="selected_price">7 crore/-</p>
+                        <p class="selected_house">Blue Reef Properties</p>
+                        <p class="selected_location">in New Delhi <br>7BHK </p>
+                    </div>
+                </div>
+                <div class="selected_flat">
+                    <div class="selected_flat_up">
+                        <img src="product_image/building3jpg" alt="" srcset="">
+                    </div>
+                    <div class="selected_flat_down">
+                        <p class="selected_price">15 Lac/-</p>
+                        <p class="selected_house">Alpha Real Estate</p>
+                        <p class="selected_location">in Patna,Bihar <br>2BHK </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="cont">
+            <div class="cont1" style="background-color: red;" ></div>
+            <div class="cont1" style="background-color: yellow;" ></div>
+            <div class="cont1" style="background-color: blue;" ></div>
+            <div class="cont1" style="background-color: green;" ></div>
+        </div> -->
+        <div class="firstline">Recent Project</div>
+        <div class="properties">
+            <div class="card">
+                <div class="product_image">
+                    <img src="/product_image/download1.jfif" alt="picture 1">
+                    <h3 class="line1">AAVAS</h3>
+                    <div class="card_content">
+                        by 99acres.com<br>
+                        dwarka sector 12 <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            2.0 cr </font>onwards
+                        Marketed by LOVELY HOMES<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="/product_image/download5.png" alt="picture 1">
+                    <h3 class="line1">NIKETAN</h3>
+                    <div class="card_content">
+                        by GHAR DEKHO<br>
+                        Defence Colony,New Delhi <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            3.5 Cr </font>onwards
+                        Marketed by LOVELY HOMES <br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download3.jfif" alt="picture 1">
+                    <h3 class="line1">BEACH TREE COTTAGE</h3>
+                    <div class="card_content">
+                        by 99acres.com<br>
+                        patna bihar <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.5 Cr </font>onwards
+                        Marketed by lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download4.jfif" alt="picture 1">
+                    <h3 class="line1">ROSE COTTAGE</h3>
+                    <div class="card_content">
+                        by Ghardekho <br>
+                        Chandigarh,kharar <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            4.0 Cr </font>onwards
+                        Marketed by lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="firstline">Top Project</div>
+        <div class="properties">
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download6.jpg" alt="picture 1">
+                    <h3 class="line1">JANNAT</h3>
+                    <div class="card_content">
+                        by 99acres <br>
+                        sec 62 , greater noida <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download7.jpg" alt="picture 1">
+                    <h3 class="line1">LION'S DEN</h3>
+                    <div class="card_content">
+                        by india property <br>
+                        mmohali,chandigarh <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download8.jpg" alt="picture 1">
+                    <h3 class="line1">LITTLE OAKS</h3>
+                    <div class="card_content">
+                        by Realty Guru<br>
+                        Andheri west, Mumbai <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download9.jpg" alt="picture 1">
+                    <h3 class="line1">THE MEADOWS</h3>
+                    <div class="card_content">
+                        by Future homes<br>
+                        DLF phase1,Gurgaon <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="firstline">Treading in New Delhi</div>
+        <div class="properties">
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download10.jpg" alt="picture 1">
+                    <h3 class="line1">FUTURE MANSION</h3>
+                    <div class="card_content">
+                        by india property<br>
+                        Defence Colony,New Delhi <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download11.jfif" alt="picture 1">
+                    <h3 class="line1">SHANTI AAVAS </h3>
+                    <div class="card_content">
+                        by 99acres<br>
+                        Dawarka,New Delhi <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download12.jpg" alt="picture 1">
+                    <h3 class="line1">AATHITHI</h3>
+                    <div class="card_content">
+                        by india property<br>
+                        seelampur,New Delhi <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Lovely Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product_image">
+                    <img src="product_image/download13.jpg" alt="picture 1">
+                    <h3 class="line1">Anytown Real Estate</h3>
+                    <div class="card_content">
+                        by 99acres<br>
+                        Defence Colony,New Delhi <br><br>
+                        3.4 BHK Flats <br>
+                        <font style="font-weight: bold;color: black;font-family: 'Courier New', Courier, monospace;">
+                            5.50 Cr </font>onwards
+                        Marketed by Dream Homes<br>
+                        <button class="view_flat_button">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- payrent vastu hospital electricity -->
+        <div class="services_block">
+            <div class="firstline">Services</div>
+            <div class="properties">
+                <div class="card">
+                    <div class="product_image">
+                        <img src="homepage_image/payment_image.jpg" alt="picture 1">
+                        <h3 class="line1">Payment</h3>
+                        <div class="card_content">
+                            Pay your rent easily and safely from owr website<br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product_image">
+                        <img src="product_image/vastu.jpg" alt="picture 1">
+                        <h3 class="line1">Vastu</h3>
+                        <div class="card_content">
+                            You can also contact with owr vastu advisor without and issue<br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product_image">
+                        <img src="product_image/hospital.jpeg" alt="picture 1">
+                        <h3 class="line1">Hospital</h3>
+                        <div class="card_content">
+                            All owr properties are very close to hospitals<br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product_image">
+                        <img src="product_image/electricity.png" alt="picture 1">
+                        <h3 class="line1">Electricity</h3>
+                        <div class="card_content">
+                            Pay your electricity bill on time<br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="add">
+            <div class="add_left">
+                adfadf
+            </div>
+            <div class="add_right">
+                <img src="product_image/add_sale_add.jpg" alt="">
+            </div>
+        </div> -->
+        <div class="firstline">Find your Property in preferred city</div>
+        <div class="city_list">
+            <div class="city1" style="margin-left: 20px;">
+                <img src="product_image/delhi.webp" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Delhi/NCR
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+            <div class="city1">
+                <img src="product_image/mumbai.jpg" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Mumbai
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+            <div class="city1">
+                <img src="product_image/pune.jpg" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Pune
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+            <div class="city1">
+                <img src="product_image/chennai.webp" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Chennai
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+            <div class="city1" style="margin-left: 20px;">
+                <img src="product_image/hydrabad.webp" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Hydrabad
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+            <div class="city1">
+                <img src="product_image/Kolkata.jpg" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Kolkata
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+            <div class="city1">
+                <img src="product_image/patna.jpg" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Patna
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+            <div class="city1">
+                <img src="product_image/aayodhya.jpg" alt="" width="50%" height="100%">
+                <div class="city1_text">
+                    Ayodhya
+                    <div class="cit1_text_lower">
+                        180000+ flats
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- about section -->
+    <div class="about_us">
+        <div class="about_us_left">
+            <img src="about_us_image/logo.png" alt="" srcset="">
+            <div class="about_us_left_content">
+                Lovely Homes is a full property service provider for all real estate needs. Our website is one of the
+                largest platform for buyers and sellers of property to connects in a easy manner, Lovely Home has an
+                active base of over 15 lakh property listings our wbsite provides 50+ services like home loans, pay
+                rent, packers and movers, legal assistance, property valuation and expert advice as well. We provide
+                least amount of commision from owr customer for any kind of property deals. You can directly interact
+                with the property owner just by fixing meeting through owr website.
+            </div>
+        </div>
+        <div class="about_us_middle">
+            <div class="about_us_head1">
+                Quick Links
+            </div>
+            <a class="about_us_middle_a" href="http://" target="_blank" rel="noopener noreferrer"
+                style="padding-top: 12px;">About Us</a>
+            <a class="about_us_middle_a" href="http://" target="_blank" rel="noopener noreferrer">Contact Us</a>
+            <a class="about_us_middle_a" href="http://" target="_blank" rel="noopener noreferrer">Home Loan</a>
+            <a class="about_us_middle_a" href="http://" target="_blank" rel="noopener noreferrer">International</a>
+            <a class="about_us_middle_a" href="http://" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </div>
+        <div class="about_us_right">
+            <div class="about_us_head1">
+                Contact Us
+            </div>
+            <div class="about_us_head2">
+                Toll Free
+            </div>
+            <div class="about_us_content1">
+                1800 3000 0123
+            </div>
+            <div class="about_us_head2" style="margin-top: 7px;">
+                Email Address
+            </div>
+            <div class="about_us_content1">
+                contact.us@lovelyhomes.com
+            </div>
+            <div class="about_us_head2" style="margin-top: 7px;">
+                <div class="about_us_content2">
+                    Follow Us On
+                </div>
+                <div class="contact_image_link">
+                    <a href="https://www.linkedin.com/in/abhishek-bharti-dev/" target="_blank">
+                        <img src="about_us_image/facebook.png" alt="" srcset="" style="margin-left: 30px;">
+                    </a>
+                    <a href="https://twitter.com/abhishek9369701" target="_blank">
+                        <img src="about_us_image/twitter.png" alt="" srcset="">
+                    </a>
+                    <a href="http://www.linkedin.com/in/abhishek-bharti-dev/" target="_blank">
+                        <img src="about_us_image/linkedin.png" alt="" srcset="">
+                    </a>
+                    <a href="https://www.instagram.com/abhishekbharti.dev/" target="_blank">
+                        <img src="about_us_image/instagram.png" alt="" srcset="">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        // for navbar
+        document.getElementById('signup_content').style.display = 'none';
+        // document.getElementById('signup_head').click()
+        document.getElementById('login_popup').style.display = 'none';
+    </script>
+    <script>
+        document.getElementById('search_id1').style.color = '#d8232a'
+        document.getElementById('search_id1').style.fontFamily = 'Open Sans'
+        document.getElementById('search_id1').style.borderColor = '#d8232a'
+        document.getElementById('search_id1').style.fontWeight = '700'
+    </script>
+</body>
+
+</html>
